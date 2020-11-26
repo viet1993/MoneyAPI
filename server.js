@@ -16,11 +16,11 @@ function startServer () {
   console.log("Server has started port " + port);
 }
 
-function readXML () {
+function readXML (link) {
   fs = require('fs');
   var parser = require('xml2json');
 
-  fs.readFile( './data.xml', function(err, data) {
+  fs.readFile( link, function(err, data) {
       var json = parser.toJson(data);
       console.log("to json ->", json);
   });
