@@ -1,6 +1,5 @@
 var server = require("./server");
-var router = require("./route");
+var router = require("./api/route");
 
 server.startServer(router.route);
-server.readXML("");
-
+setTimeout(function(){server.readXML(), server.readXMLGold()} , 120000)
